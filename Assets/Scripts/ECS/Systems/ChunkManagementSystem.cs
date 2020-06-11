@@ -13,12 +13,12 @@ public class ChunkManagementSystem : SystemBase
 
     const int viewDistance = 100; //max view distance in terms of chunks, each chunk is 16mx16m. this results in a view distance of 1.6km in each direction
 
-    NativeHashMap<float3,Entity> chunks;
+    NativeHashMap<int2,Entity> chunks;
 
     protected override void OnCreate()
     {
 
-        chunks = new NativeHashMap<float3, Entity>(viewDistance * viewDistance, Allocator.Persistent);
+        chunks = new NativeHashMap<int2, Entity>(viewDistance * viewDistance, Allocator.Persistent);
 
     }
     protected override void OnUpdate()
