@@ -15,15 +15,16 @@ public class ChunkManagementSystem : SystemBase
 
     NativeHashMap<int2,Entity> chunks;
 
+    EntityQuery chunkQuery;
+
     protected override void OnCreate()
     {
         chunks = new NativeHashMap<int2, Entity>(viewDistance * viewDistance, Allocator.Persistent);
     }
+
     protected override void OnUpdate()
     {
-
-
-
+        
     }
 
 
